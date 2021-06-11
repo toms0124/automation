@@ -1,0 +1,31 @@
+name: Manually Triggered Cypress Tests with installation job
+
+on:
+  workflow_dispatch:
+    inputs:
+      baseUrl:
+        description: 'Testing Domain'
+        required: true
+        default: 'https://www.uschamber.com'
+      title:
+        description: 'Merge Comment'
+        required: true
+        default: 'Running Cypress Tests'
+
+jobs:
+  cypress-run:
+    runs-on: Windows10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        #with:
+          #record: true
+        env:
+          #CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          CYPRESS_baseUrl: ${{ github.event.inputs.baseUrl }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COMMIT_INFO_MESSAGE: ${{ github.event.inputs.title }}
