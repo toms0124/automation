@@ -14,7 +14,7 @@ on:
 
 jobs:
   cypress-run:
-    runs-on: Windows10
+    runs-on: windows10
     steps:
       - name: Checkout
         uses: actions/checkout@v2
