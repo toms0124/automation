@@ -43,6 +43,7 @@
     headless: # optional
     # Provide a specific specs to run
     spec: # optional
+    C:\Project\automation\cypress\integration\sample_spec.js
     # Path of project to run
     project: # optional
     # You can prefix the default test command using the command-prefix option.
