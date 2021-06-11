@@ -1,0 +1,8 @@
+{
+  "projectId": "mkehcv",
+  "viewportWidth": 1400,
+  "viewportHeight": 800,
+  "env":{
+    "base_url": "http://59.3.93.125:8085/aimir/"
+  }
+}
