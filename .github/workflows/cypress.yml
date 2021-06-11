@@ -6,7 +6,7 @@ on:
       baseUrl:
         description: 'Testing Domain'
         required: true
-        default: 'https://www.uschamber.com'
+        default: 'https://naver.com'
       title:
         description: 'Merge Comment'
         required: true
